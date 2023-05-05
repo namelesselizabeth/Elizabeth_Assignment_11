@@ -14,9 +14,21 @@
 				<th>Funds In</th>
 				<th>Funds Out</th>
 			</tr>
-			<!-- These 4 rows below are for demonstration purposes only
-			     You will need to edit the code below in order to make
-			     it dynamically list ALL 100 transactions from the Repo -->
+            
+            <th:block th:each="storedTransaction : ${transactions}"> 
+             <tr>
+                <td th:text="${storedTransaction.id}"> 
+                         <a th:href="@{/transactions/{transactionId}(transactionId=${storedTransaction.id})}">
+                    </a>
+                </td>
+                 
+                 <td  th:text="${storedTransaction.date}">
+                       <!-- [[${storedTransaction.date}]]    -->
+                 </td>
+            </tr>
+            </th:block>
+           
+    <!--
 			<tr>
 				<td><a href="/transactions/50">50</a></td>
 				<td>2020-01-01T19:04:48</td>
@@ -45,7 +57,7 @@
 				<td>38.50</td>
 				<td></td>
 			</tr>
-			
+        -->
 		</table>
 	</body>
 </html>

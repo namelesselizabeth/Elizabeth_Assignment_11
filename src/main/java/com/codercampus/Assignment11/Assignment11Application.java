@@ -1,13 +1,13 @@
-package com.coderscampus.Elizabeth_Assignment_11;
+package com.codercampus.Assignment11;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ElizabethAssignment11Application {
+public class Assignment11Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ElizabethAssignment11Application.class, args);
+		SpringApplication.run(Assignment11Application.class, args);
 	}
 
 }
