@@ -15,20 +15,20 @@ public class TransactionController {
 @Autowired
 private TransactionRepository transactionRepo;
 
-@GetMapping("/transactions")
-	public String getTransactionsPage(ModelMap model) {
-	
-	List<Transaction> transactions = transactionRepo.findAll();
-	model.put("transactions", transactions);
-	
-	return "transactions";
-}
-
-@GetMapping("/transactions/{transactionId}")
-	public String getTransactionId(@PathVariable Long transactionId, ModelMap model) {
-		Transaction transaction = transactionRepo.findById(transactionId);			
-		model.put("transaction", transaction);
+	@GetMapping("/transactions")
+		public String getTransactionsPage(ModelMap model) {
 		
-	return "transactionID";
-}
+		List<Transaction> transactions = transactionRepo.findAll();
+		model.put("transactions", transactions);
+		
+		return "transactions";
+	}
+
+	@GetMapping("/transactions/{transactionId}")
+		public String getTransactionId(@PathVariable Long transactionId, ModelMap model) {
+			Transaction transactions = transactionRepo.findById(transactionId);			
+			model.put("transactions", transactions);
+			
+		return "transactionID";
+	}
 }
