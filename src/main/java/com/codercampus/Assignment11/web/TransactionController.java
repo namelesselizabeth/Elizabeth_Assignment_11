@@ -26,8 +26,8 @@ private TransactionRepository transactionRepo;
 
 	@GetMapping("/transactions/{transactionId}")
 		public String getTransactionId(@PathVariable Long transactionId, ModelMap model) {
-			Transaction transactions = transactionRepo.findById(transactionId);			
-			model.put("transactions", transactions);
+			Transaction transaction = transactionRepo.findById(transactionId);			
+			model.put("transaction", transaction);
 			
 		return "transactionID";
 	}

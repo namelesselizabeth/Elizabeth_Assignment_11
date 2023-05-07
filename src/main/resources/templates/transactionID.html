@@ -3,8 +3,8 @@
 		<title>Transaction Info</title>
 	</head>
 	<body>
-		<div >
-            
+		<div th:each="stored : ${transaction}">
+            <h1 th:text="${stored.id}"></h1>
         </div>
 	</body>
 </html>
