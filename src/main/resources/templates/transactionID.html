@@ -15,7 +15,8 @@
         <div>
 
             <span>Date: [[${transaction.date}]]</span> <br/>
-            <span>Amount: [[${transaction.amount}]]</span> <br/>
+            <span th:if="${transaction.type == 'C'}" >Amount: -[[${transaction.amount}]]</span> <br/>
+            <span th:if="${transaction.type == 'D'}" >Amount: [[${transaction.amount}]]</span> <br/>
             <span>Description: [[${transaction.description}]]</span>
         
 
